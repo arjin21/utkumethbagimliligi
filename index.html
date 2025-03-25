@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utku İçin Metamfetaminden Kurtulma Rehberi</title>
+    <style>
+        :root {
+            --primary: #4a6fa5;
+            --secondary: #166088;
+            --accent: #4fc3f7;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --success: #28a745;
+            --warning: #ffc107;
+            --danger: #dc3545;
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path fill="rgba(255,255,255,0.1)" d="M0,0 L100,0 L100,100 L0,100 Z" /></svg>');
+            opacity: 0.3;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .hero-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            margin: 1rem auto;
+            display: block;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .section {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+        
+        .section:hover {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transform: translateY(-3px);
+        }
+        
+        h2 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent);
+        }
+        
+        h3 {
+            color: var(--secondary);
+            margin: 1.5rem 0 1rem;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        ul, ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .card {
+            flex: 1 1 300px;
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            transition: var(--transition);
+            border-top: 4px solid var(--accent);
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+        
+        .card h3 {
+            color: var(--primary);
+            margin-top: 0;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            margin: 0.5rem 0;
+        }
+        
+        .btn:hover {
+            background-color: var(--secondary);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+        
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 0.3rem 0.6rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-right: 0.5rem;
+        }
+        
+        .badge-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .badge-success {
+            background-color: var(--success);
+            color: white;
+        }
+        
+        .badge-warning {
+            background-color: var(--warning);
+            color: var(--dark);
+        }
+        
+        .badge-danger {
+            background-color: var(--danger);
+            color: white;
+        }
+        
+        .progress-container {
+            margin: 2rem 0;
+        }
+        
+        .progress-bar {
+            height: 10px;
+            background-color: #e9ecef;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-bottom: 0.5rem;
+        }
+        
+        .progress {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            width: 0;
+            transition: width 1s ease;
+        }
+        
+        .motivation-quote {
+            font-style: italic;
+            font-size: 1.2rem;
+            text-align: center;
+            padding: 1.5rem;
+            background-color: rgba(74, 111, 165, 0.1);
+            border-left: 4px solid var(--primary);
+            border-radius: 0 8px 8px 0;
+            margin: 2rem 0;
+        }
+        
+        .resource-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .resource-item {
+            padding: 1rem;
+            border-radius: 8px;
+            background-color: #f8f9fa;
+            border-left: 4px solid var(--accent);
+        }
+        
+        .emergency-box {
+            background-color: #fff8f8;
+            border: 2px solid var(--danger);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .emergency-box h3 {
+            color: var(--danger);
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 2rem auto;
+        }
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: var(--accent);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+        }
+        
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            border: 4px solid var(--primary);
+            border-radius: 50%;
+            top: 15px;
+            z-index: 1;
+        }
+        
+        .left {
+            left: 0;
+        }
+        
+        .right {
+            left: 50%;
+        }
+        
+        .left::after {
+            right: -12px;
+        }
+        
+        .right::after {
+            left: -12px;
+        }
+        
+        .timeline-content {
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            background-color: var(--dark);
+            color: white;
+            border-radius: 20px 20px 0 0;
+            margin-top: 3rem;
+        }
+        
+        .counter-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+        
+        .counter {
+            text-align: center;
+            padding: 1.5rem;
+            min-width: 200px;
+        }
+        
+        .counter-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .counter-label {
+            font-size: 1rem;
+            color: var(--dark);
+        }
+        
+        @media screen and (max-width: 768px) {
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item::after {
+                left: 21px;
+            }
+            
+            .left::after, .right::after {
+                left: 21px;
+            }
+            
+            .right {
+                left: 0%;
+            }
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animated {
+            animation: fadeIn 0.8s ease forwards;
+        }
+        
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        .delay-4 { animation-delay: 0.8s; }
+        
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.5);
+        }
+        
+        .modal-content {
+            background-color: white;
+            margin: 10% auto;
+            padding: 2rem;
+            border-radius: 10px;
+            max-width: 600px;
+            width: 90%;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            position: relative;
+        }
+        
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--dark);
+            cursor: pointer;
+        }
+        
+        /* Daily tracker */
+        .tracker-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 10px;
+            margin: 1rem 0;
+        }
+        
+        .tracker-day {
+            background-color: #f0f4f8;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .tracker-day:hover {
+            background-color: #e1e8f0;
+        }
+        
+        .tracker-day.active {
+            background-color: var(--success);
+            color: white;
+        }
+        
+        /* Custom checkbox */
+        .custom-checkbox {
+            display: block;
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            user-select: none;
+        }
+        
+        .custom-checkbox input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+        
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 25px;
+            width: 25px;
+            background-color: #eee;
+            border-radius: 5px;
+        }
+        
+        .custom-checkbox:hover input ~ .checkmark {
+            background-color: #ccc;
+        }
+        
+        .custom-checkbox input:checked ~ .checkmark {
+            background-color: var(--success);
+        }
+        
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+        
+        .custom-checkbox input:checked ~ .checkmark:after {
+            display: block;
+        }
+        
+        .custom-checkbox .checkmark:after {
+            left: 9px;
+            top: 5px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%234a6fa5'/><text x='50%' y='50%' font-family='Arial' font-size='40' fill='white' text-anchor='middle' dominant-baseline='middle'>U</text></svg>" alt="Utku" class="hero-image">
+            <h1 class="animated">Utku, Metamfetaminden Özgür Bir Yaşam Seni Bekliyor</h1>
+            <p class="subtitle animated delay-1">Bu rehber, metamfetamin bağımlılığından kurtulma yolculuğunda sana adım adım eşlik edecek profesyonel bir kaynaktır.</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <section class="section animated delay-2">
+            <h2>Bağımlılıkla Mücadelede İlk Adımlar</h2>
+            <p>Sevgili Utku, bu zorlu yolculukta yalnız olmadığını bilmelisin. Metamfetamin bağımlılığı güçlü olsa da, sen daha güçlüsün. İşte başlamak için temel adımlar:</p>
+            
+            <div class="card-container">
+                <div class="card">
+                    <h3>1. Kabul Etme</h3>
+                    <p>Bağımlılığını kabul etmek, iyileşme yolculuğundaki ilk ve en önemli adımdır. Bu adımı attığına göre zaten doğru yoldasın.</p>
+                </div>
+                <div class="card">
+                    <h3>2. Destek Sistemini Oluştur</h3>
+                    <p>Aileni ve gerçek dostlarını bu sürece dahil et. Profesyonel destek almayı ihmal etme.</p>
+                </div>
+                <div class="card">
+                    <h3>3. Tetikleyicileri Belirle</h3>
+                    <p>Madde kullanımına iten durumları, ortamları ve duyguları tanımla. Bunlardan kaçınmak için plan yap.</p>
+                </div>
+            </div>
+            
+            <div class="motivation-quote animated delay-3">
+                "En karanlık geceler bile sona erer ve güneş doğar." - Victor Hugo
+            </div>
+        </section>
+        
+        <section class="section animated delay-3">
+            <h2>Yoksunluk Belirtileri ve Başa Çıkma Stratejileri</h2>
+            <p>Bırakma sürecinde ortaya çıkabilecek yoksunluk belirtilerini bilmek ve bunlarla başa çıkma yöntemlerini öğrenmek çok önemlidir.</p>
+            
+            <div class="card-container">
+                <div class="card">
+                    <h3>Yorgunluk ve Uyuşukluk</h3>
+                    <p><strong>Ne kadar sürer:</strong> 2-14 gün</p>
+                    <p><strong>Başa çıkma:</strong> Hafif egzersizler, dengeli beslenme, düzenli uyku</p>
+                </div>
+                <div class="card">
+                    <h3>Depresyon ve Anksiyete</h3>
+                    <p><strong>Ne kadar sürer:</strong> 1-4 hafta (bazı durumlarda daha uzun)</p>
+                    <p><strong>Başa çıkma:</strong> Nefes egzersizleri, meditasyon, profesyonel destek</p>
+                </div>
+                <div class="card">
+                    <h3>Uyku Problemleri</h3>
+                    <p><strong>Ne kadar sürer:</strong> 1-3 hafta</p>
+                    <p><strong>Başa çıkma:</strong> Uyku hijyeni, kafeinden kaçınma, rahatlatıcı rutinler</p>
+                </div>
+            </div>
+            
+            <div class="emergency-box">
+                <h3>ACİL DURUMLAR İÇİN</h3>
+                <p>Eğer kendine veya başkalarına zarar verme düşüncelerin olursa, derhal yardım iste:</p>
+                <ul>
+                    <li><strong>Psikiyatri Acil:</strong> 112</li>
+                    <li><strong>Alo 191 Uyuşturucu ile Mücadele Danışma Hattı</strong></li>
+                    <li><strong>En yakın hastanenin acil servisi</strong></li>
+                </ul>
+            </div>
+        </section>
+        
+        <section class="section animated delay-4">
+            <h2>İyileşme Sürecinde İlerleme Takibi</h2>
+            <p>İlerlemeni takip etmek motivasyonunu artıracak ve zor zamanlarda ne kadar yol katettiğini görmeni sağlayacaktır.</p>
+            
+            <div class="progress-container">
+                <h3>Temiz Kalma Süresi</h3>
+                <div class="progress-bar">
+                    <div class="progress" id="clean-time-progress"></div>
+                </div>
+                <p id="clean-time-text">0 gün temiz</p>
+            </div>
+            
+            <div class="counter-container">
+                <div class="counter">
+                    <div class="counter-number" id="days-clean">0</div>
+                    <div class="counter-label">Gün Temiz</div>
+                </div>
+                <div class="counter">
+                    <div class="counter-number" id="money-saved">0</div>
+                    <div class="counter-label">TL Tasarruf</div>
+                </div>
+                <div class="counter">
+                    <div class="counter-number" id="health-improvement">0</div>
+                    <div class="counter-label">Sağlık Kazanımı</div>
+                </div>
+            </div>
+            
+            <h3>Günlük Takip Çizelgesi</h3>
+            <div class="tracker-grid" id="tracker-grid">
+                <!-- JavaScript ile doldurulacak -->
+            </div>
+            
+            <button class="btn" id="add-clean-day">Bugün Temiz Kaldım</button>
+        </section>
+        
+        <section class="section">
+            <h2>İyileşme Sürecinin Aşamaları</h2>
+            <p>Metamfetaminden kurtulma süreci aşamalı olarak ilerler. Her aşamada farklı zorluklar ve başarılar seni bekliyor.</p>
+            
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3>1. Hafta: Fiziksel Detoks</h3>
+                        <p>Vücudun maddenin etkilerinden arınmaya başlar. Yoksunluk belirtileri yoğun olabilir.</p>
+                        <span class="badge badge-primary">Zorluk: Yüksek</span>
+                        <span class="badge badge-success">Ödül: Fiziksel bağımlılık azalır</span>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3>2-4 Hafta: Akut Yoksunluk</h3>
+                        <p>Fiziksel belirtiler azalırken psikolojik belirtiler devam edebilir. Ruh hali dalgalanmaları olabilir.</p>
+                        <span class="badge badge-warning">Zorluk: Orta-Yüksek</span>
+                        <span class="badge badge-success">Ödül: Zihin berraklaşmaya başlar</span>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3>1-3 Ay: Erken İyileşme</h3>
+                        <p>Beyin kimyası normale dönmeye başlar. Duygusal denge yavaş yavaş sağlanır.</p>
+                        <span class="badge badge-warning">Zorluk: Orta</span>
+                        <span class="badge badge-success">Ödül: Enerji seviyesi artar</span>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3>3-6 Ay: Orta İyileşme</h3>
+                        <p>Yeni alışkanlıklar oturmaya başlar. Hayatın kontrolünü yeniden kazanırsın.</p>
+                        <span class="badge badge-primary">Zorluk: Düşük-Orta</span>
+                        <span class="badge badge-success">Ödül: Özgüven artar</span>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3>6+ Ay: Sürekli İyileşme</h3>
+                        <p>Yeni bir yaşam tarzı oluşturursun. Nüksetmeyi önleme stratejileri geliştirirsin.</p>
+                        <span class="badge badge-primary">Zorluk: Düşük</span>
+                        <span class="badge badge-success">Ödül: Özgür ve sağlıklı bir yaşam</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>Sağlıklı Yaşam İpuçları</h2>
+            <p>Bağımlılıktan kurtulma sürecinde vücudunu ve zihnini desteklemek çok önemlidir.</p>
+            
+            <h3>Beslenme Önerileri</h3>
+            <ul>
+                <li><strong>Protein açısından zengin gıdalar:</strong> Yumurta, balık, tavuk, baklagiller - nörotransmitter üretimini destekler</li>
+                <li><strong>Kompleks karbonhidratlar:</strong> Tam tahıllar, yulaf, esmer pirinç - enerji seviyesini dengeler</li>
+                <li><strong>Omega-3 yağ asitleri:</strong> Ceviz, keten tohumu, somon - beyin sağlığını destekler</li>
+                <li><strong>Antioksidanlar:</strong> Meyveler, koyu yeşil yapraklı sebzeler - serbest radikallerle savaşır</li>
+            </ul>
+            
+            <h3>Egzersiz Planı</h3>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Yürüyüş</h3>
+                    <p>Günde 30 dakika yürüyüş endorfin salgılatır ve stresi azaltır.</p>
+                </div>
+                <div class="card">
+                    <h3>Yoga</h3>
+                    <p>Haftada 2-3 kez yoga zihin-beden bağlantısını güçlendirir.</p>
+                </div>
+                <div class="card">
+                    <h3>Yüzme</h3>
+                    <p>Tüm vücut egzersizi sağlarken eklemlere zarar vermez.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>Motivasyon ve Başarı Hikayeleri</h2>
+            <p>Başkalarının başarı hikayeleri, senin de başarabileceğine dair inancını güçlendirecektir.</p>
+            
+            <div class="card-container">
+                <div class="card">
+                    <h3>Ahmet'in Hikayesi</h3>
+                    <p>"5 yıl metamfetamin kullandım. Bıraktıktan sonra ilk 3 ay çok zordu ama şimdi 3 yıldır temizim. Üniversiteyi bitirdim ve bir ailem oldu."</p>
+                </div>
+                <div class="card">
+                    <h3>Deniz'in Yolculuğu</h3>
+                    <p>"Madde beni neredeyse öldürüyordu. 2 kez nüksettim ama pes etmedim. Şimdi 18 aydır temizim ve bağımlılık danışmanı olarak çalışıyorum."</p>
+                </div>
+            </div>
+            
+            <div class="motivation-quote">
+                "Kendini toparlamak için asla geç değildir. Eğer kötü bir yolda olduğunu fark ettiysen, dur. Bu senin ikinci şansın olacaktır." - J.R.R. Tolkien
+            </div>
+            
+            <button class="btn" id="show-motivation">Motivasyonumu Artır</button>
+        </section>
+        
+        <section class="section">
+            <h2>Profesyonel Yardım Kaynakları</h2>
+            <p>Türkiye'de bulabileceğin profesyonel destek seçenekleri:</p>
+            
+            <div class="resource-list">
+                <div class="resource-item">
+                    <h3>AMATEM (Alkol ve Madde Bağımlılığı Tedavi Merkezi)</h3>
+                    <p>Ücretsiz tedavi ve danışmanlık hizmetleri sunan devlet merkezleri.</p>
+                    <a href="#" class="btn btn-outline">Daha Fazla Bilgi</a>
+                </div>
+                <div class="resource-item">
+                    <h3>Yeşilay Danışmanlık Merkezi (YEDAM)</h3>
+                    <p>Ücretsiz psikolojik ve sosyal destek hattı: 115</p>
+                    <a href="#" class="btn btn-outline">Web Sitesi</a>
+                </div>
+                <div class="resource-item">
+                    <h3>Özel Bağımlılık Tedavi Merkezleri</h3>
+                    <p>Ücretli özel kliniklerde daha kapsamlı tedavi seçenekleri mevcuttur.</p>
+                    <a href="#" class="btn btn-outline">Listeyi Gör</a>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>Sık Sorulan Sorular</h2>
+            
+            <h3>Nüksetme (relaps) durumunda ne yapmalıyım?</h3>
+            <p>Nüksetme iyileşme sürecinin normal bir parçası olabilir. Hemen pes etme, destek sistemine ulaş ve tedavi planını gözden geçir. Bir geri adım, tüm ilerlemeyi silmez.</p>
+            
+            <h3>İlaç tedavisi gerekli mi?</h3>
+            <p>Bazı durumlarda doktor kontrolünde antidepresanlar veya diğer ilaçlar yoksunluk belirtilerini hafifletmek için kullanılabilir. Bu tamamen kişiye özel bir karardır.</p>
+            
+            <h3>Ne zaman kendimi daha iyi hissedeceğim?</h3>
+            <p>Fiziksel belirtiler genellikle 1-2 haftada azalır ancak psikolojik iyileşme aylar alabilir. Sabırlı ol, her gün biraz daha iyi hissedeceksin.</p>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>Utku, bu yolculukta yalnız değilsin. Her adımında yanında olacak insanlar var.</p>
+            <p>© 2023 Metamfetaminden Kurtulma Rehberi - Utku İçin</p>
+        </div>
+    </footer>
+    
+    <!-- Motivasyon Modal -->
+    <div id="motivation-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Motivasyon Dozu</h2>
+            <div id="motivation-content">
+                <p>"Bugün zor bir gün olabilir, ama unutma ki dün de zordu ve sen onu atlattın. Yarın daha iyi olacak."</p>
+                <p>Şu anda hissettiğin zorluklar geçici. Vücudun ve zihnin iyileşme sürecinde. Kendine zaman tanı.</p>
+                <p>Şimdiye kadar gösterdiğin güç, bundan sonra da seni taşıyacak.</p>
+            </div>
+            <button class="btn" id="new-motivation">Yeni Motivasyon</button>
+        </div>
+    </div>
+    
+    <script>
+        // Temiz gün takipçisi
+        let cleanDays = localStorage.getItem('cleanDays') ? JSON.parse(localStorage.getItem('cleanDays')) : [];
+        const today = new Date().toISOString().split('T')[0];
+        
+        // İlerleme çubuğu ve sayaçlar
+        const cleanTimeProgress = document.getElementById('clean-time-progress');
+        const cleanTimeText = document.getElementById('clean-time-text');
+        const daysCleanElement = document.getElementById('days-clean');
+        const moneySavedElement = document.getElementById('money-saved');
+        const healthImprovementElement = document.getElementById('health-improvement');
+        const trackerGrid = document.getElementById('tracker-grid');
+        const addCleanDayBtn = document.getElementById('add-clean-day');
+        
+        // Modal elemanları
+        const motivationModal = document.getElementById('motivation-modal');
+        const showMotivationBtn = document.getElementById('show-motivation');
+        const closeBtn = document.querySelector('.close-btn');
+        const newMotivationBtn = document.getElementById('new-motivation');
+        const motivationContent = document.getElementById('motivation-content');
+        
+        // Motivasyon sözleri
+        const motivations = [
+            {
+                quote: "Hayatında yapacağın en güçlü şey, kendin için yardım istemektir.",
+                author: "Brené Brown"
+            },
+            {
+                quote: "Kendini toparlamak için asla geç değildir. Eğer kötü bir yolda olduğunu fark ettiysen, dur. Bu senin ikinci şansın olacaktır.",
+                author: "J.R.R. Tolkien"
+            },
+            {
+                quote: "Değişim acı vericidir. Hiç kimse değişimden kaçınmadan büyüyemez.",
+                author: "John C. Maxwell"
+            },
+            {
+                quote: "En büyük zaferler, en büyük mücadelelerden doğar.",
+                author: "Lou Holtz"
+            },
+            {
+                quote: "İyileşme bir varış noktası değil, bir yolculuktur. Her adım önemlidir.",
+                author: "Anonim"
+            },
+            {
+                quote: "Düşmek değil, kalkmamak başarısızlıktır. Sen her düştüğünde kalktın ve bu seni güçlü kılıyor.",
+                author: "Anonim"
+            }
+        ];
+        
+        // Sayfa yüklendiğinde
+        document.addEventListener('DOMContentLoaded', function() {
+            updateProgress();
+            renderTracker();
+            
+            // Animasyonları tetikle
+            setTimeout(() => {
+                document.querySelectorAll('.animated').forEach(el => {
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                });
+            }, 100);
+        });
+        
+        // Temiz gün ekleme butonu
+        addCleanDayBtn.addEventListener('click', function() {
+            if (!cleanDays.includes(today)) {
+                cleanDays.push(today);
+                localStorage.setItem('cleanDays', JSON.stringify(cleanDays));
+                updateProgress();
+                renderTracker();
+                
+                // Kutlama efekti
+                addCleanDayBtn.textContent = 'Harika! Bugünü Kazandın!';
+                addCleanDayBtn.style.backgroundColor = 'var(--success)';
+                setTimeout(() => {
+                    addCleanDayBtn.textContent = 'Bugün Temiz Kaldım';
+                    addCleanDayBtn.style.backgroundColor = 'var(--primary)';
+                }, 2000);
+            } else {
+                alert('Bugün zaten temiz günler listesinde!');
+            }
+        });
+        
+        // İlerlemeyi güncelle
+        function updateProgress() {
+            const cleanCount = cleanDays.length;
+            const longestStreak = calculateLongestStreak();
+            
+            // İlerleme çubuğu (90 gün üzerinden)
+            const progressPercent = Math.min(100, (longestStreak / 90) * 100);
+            cleanTimeProgress.style.width = `${progressPercent}%`;
+            cleanTimeText.textContent = `${longestStreak} gün temiz (En uzun seri)`;
+            
+            // Sayaçlar
+            daysCleanElement.textContent = cleanCount;
+            moneySavedElement.textContent = cleanCount * 150; // Günde 150 TL tasarruf varsayımı
+            healthImprovementElement.textContent = Math.min(100, cleanCount * 2); // %2 iyileşme/gün
+        }
+        
+        // Takip çizelgesini oluştur
+        function renderTracker() {
+            trackerGrid.innerHTML = '';
+            
+            // Son 7 günü göster
+            for (let i = 6; i >= 0; i--) {
+                const date = new Date();
+                date.setDate(date.getDate() - i);
+                const dateStr = date.toISOString().split('T')[0];
+                
+                const dayElement = document.createElement('div');
+                dayElement.className = 'tracker-day';
+                if (cleanDays.includes(dateStr)) {
+                    dayElement.classList.add('active');
+                    dayElement.style.backgroundColor = 'var(--success)';
+                    dayElement.style.color = 'white';
+                }
+                
+                dayElement.textContent = new Intl.DateTimeFormat('tr-TR', { weekday: 'short' }).format(date);
+                trackerGrid.appendChild(dayElement);
+            }
+        }
+        
+        // En uzun temiz kalma serisini hesapla
+        function calculateLongestStreak() {
+            if (cleanDays.length === 0) return 0;
+            
+            // Tarihleri sırala
+            const sortedDates = cleanDays.slice().sort();
+            let longestStreak = 1;
+            let currentStreak = 1;
+            
+            for (let i = 1; i < sortedDates.length; i++) {
+                const prevDate = new Date(sortedDates[i-1]);
+                const currDate = new Date(sortedDates[i]);
+                
+                // Bir günün milisaniye cinsinden değeri
+                const dayInMs = 24 * 60 * 60 * 1000;
+                const diffDays = Math.round((currDate - prevDate) / dayInMs);
+                
+                if (diffDays === 1) {
+                    currentStreak++;
+                    longestStreak = Math.max(longestStreak, currentStreak);
+                } else if (diffDays > 1) {
+                    currentStreak = 1;
+                }
+            }
+            
+            return longestStreak;
+        }
+        
+        // Motivasyon modalını aç
+        showMotivationBtn.addEventListener('click', function() {
+            motivationModal.style.display = 'block';
+            showRandomMotivation();
+        });
+        
+        // Modalı kapat
+        closeBtn.addEventListener('click', function() {
+            motivationModal.style.display = 'none';
+        });
+        
+        // Dışarı tıklayınca kapat
+        window.addEventListener('click', function(event) {
+            if (event.target === motivationModal) {
+                motivationModal.style.display = 'none';
+            }
+        });
+        
+        // Yeni motivasyon göster
+        newMotivationBtn.addEventListener('click', showRandomMotivation);
+        
+        // Rastgele motivasyon göster
+        function showRandomMotivation() {
+            const randomMotivation = motivations[Math.floor(Math.random() * motivations.length)];
+            motivationContent.innerHTML = `
+                <p>"${randomMotivation.quote}"</p>
+                <p><strong>— ${randomMotivation.author}</strong></p>
+                <p>Unutma Utku, her temiz gün seni özgürlüğe bir adım daha yaklaştırıyor.</p>
+            `;
+        }
+    </script>
+</body>
+</html>
